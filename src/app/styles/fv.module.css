@@ -1,0 +1,50 @@
+/* fv.module.css */
+
+.firstview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Adjust the height to account for the header */
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.firstview h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.firstview p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.typingCursor {
+  display: inline-block;
+  width: 1px;
+  background-color: black;
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+.hide {
+  visibility: hidden; 
+}
+
+.show {
+  visibility: visible; 
+  animation-name: textAnimation;
+  animation-duration: 0.5s;
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
