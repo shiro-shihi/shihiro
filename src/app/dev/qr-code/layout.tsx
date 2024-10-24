@@ -1,22 +1,13 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import Script from "next/script";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import type { Metadata } from 'next';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: "shihiro.com",
-  description: "Shihiro Official Site",
+  title: 'QR Code Generator',
+  description: '簡単にQRコードを作成するサイトです',
+  openGraph: {
+    title: 'QR Code Generator',
+    description: '簡単にQRコードを作成するサイトです',
+  },
 };
 
 export default function RootLayout({
@@ -42,8 +33,8 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body>
+        <main>{children}</main>
       </body>
     </html>
   );
