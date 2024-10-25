@@ -2,6 +2,8 @@
 
 import React, { useState, useRef } from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
+import styles from "....../styles/qrcode.module.css"
+
 const QRCodeGenerator: React.FC = () => {
   const [text, setText] = useState('');
   const [size, setSize] = useState(256);
@@ -76,7 +78,7 @@ const QRCodeGenerator: React.FC = () => {
                 const password = text.match(/P:(.*?);;/)?.[1] || '';
                 setText(`WIFI:S:${ssid};T:${security};P:${password};;`);
               }}
-              style={{ padding: '10px', width: '80%', fontSize: '16px', marginBottom: '10px' }}
+              className={styles.select}
             >
               <option value="WPA">WPA</option>
               <option value="WEP">WEP</option>
